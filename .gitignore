@@ -3,6 +3,7 @@ node_modules/
 
 # Build output
 dist/
+# docs/ 는 GitHub Pages를 위해 추적
 
 # Local env files
 .env
