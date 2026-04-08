@@ -9,6 +9,7 @@ export default defineConfig({
   base: '/My-page/',
   build: {
     outDir: 'docs',
+    emptyOutDir: true,
   },
   resolve: {
     alias: {
