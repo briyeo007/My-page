@@ -96,7 +96,7 @@ function AboutPage() {
               <Grid size={{ xs: 12, md: 4 }}>
                 <Box
                   component="img"
-                  src="/images/profile.jpg"
+                  src={`${import.meta.env.BASE_URL}images/profile.jpg`}
                   alt="Brian Ungjun Yeo"
                   sx={{
                     width: { xs: 150, md: 200 },
