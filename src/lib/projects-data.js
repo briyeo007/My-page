@@ -20,8 +20,8 @@ export const projects = [
     features: ['모바일 퍼스트', '상품 필터 인터랙션', 'hover 애니메이션'],
     role: '100% 개인 작업 (기획 · 디자인 · 퍼블리싱)',
     tech_stack: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fbriyeo007.github.io%2FFurniture%2F?w=800',
-    detail_url: 'https://briyeo007.github.io/Furniture/',
+    thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.ungjunliving.com%2F?w=800',
+    detail_url: 'https://www.ungjunliving.com/',
     is_published: true,
     sort_order: 2
   },
