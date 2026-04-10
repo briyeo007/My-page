@@ -40,7 +40,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'Portfolio 2',
+    title: 'SkillBridge',
     description: '두 번째 포트폴리오 사이트. 퍼블리셔 역량을 직접 보여주기 위해 다양한 인터랙션과 애니메이션 효과를 적용했습니다.',
     period: '2024.09 – 2024.10',
     features: ['CSS 애니메이션', '반응형 레이아웃', '다크 테마'],
