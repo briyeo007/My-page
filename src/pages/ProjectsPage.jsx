@@ -63,6 +63,7 @@ function ProjectsPage() {
                     techStack={project.tech_stack}
                     thumbnailUrl={project.thumbnail_url}
                     detailUrl={project.detail_url}
+                    githubUrl={project.github_url}
                   />
                 </Box>
               </Grid>

@@ -9,6 +9,7 @@ export const projects = [
     tech_stack: ['HTML', 'CSS', 'JavaScript'],
     thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.hyobongkiup.com%2F?w=800',
     detail_url: 'https://www.hyobongkiup.com/',
+    github_url: 'https://github.com/briyeo007/-Hyobong-Enterprise',
     is_published: true,
     sort_order: 1
   },
@@ -22,6 +23,7 @@ export const projects = [
     tech_stack: ['HTML', 'CSS', 'JavaScript'],
     thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.ungjunliving.com%2F?w=800',
     detail_url: 'https://www.ungjunliving.com/',
+    github_url: 'https://github.com/briyeo007/Furniture',
     is_published: true,
     sort_order: 2
   },
@@ -35,6 +37,7 @@ export const projects = [
     tech_stack: ['HTML', 'CSS', 'JavaScript'],
     thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fungjunicecream.com%2F?w=800',
     detail_url: 'https://ungjunicecream.com/',
+    github_url: 'https://github.com/briyeo007/icecream',
     is_published: true,
     sort_order: 3
   },
@@ -48,6 +51,7 @@ export const projects = [
     tech_stack: ['HTML', 'CSS', 'JavaScript'],
     thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.ungjunportfolio.com%2F?w=800',
     detail_url: 'https://www.ungjunportfolio.com/',
+    github_url: 'https://github.com/briyeo007/Portfolio-2',
     is_published: true,
     sort_order: 4
   }

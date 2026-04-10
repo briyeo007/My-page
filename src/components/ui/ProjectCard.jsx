@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { CardContainer, CardBody, CardItem } from './ThreeDCard';
 
 /**
@@ -28,7 +29,7 @@ import { CardContainer, CardBody, CardItem } from './ThreeDCard';
  *   detailUrl="https://picstagram.netlify.app"
  * />
  */
-function ProjectCard({ title, description, period, features = [], role, techStack = [], thumbnailUrl, detailUrl }) {
+function ProjectCard({ title, description, period, features = [], role, techStack = [], thumbnailUrl, detailUrl, githubUrl }) {
   const handleViewDetails = () => {
     window.open(detailUrl, '_blank', 'noopener,noreferrer');
   };
@@ -174,21 +175,39 @@ function ProjectCard({ title, description, period, features = [], role, techStac
             </CardItem>
 
             <CardItem translateZ={20} sx={{ width: '100%', mt: 'auto' }}>
-              <Button
-                variant="outlined"
-                color="secondary"
-                endIcon={<OpenInNewIcon />}
-                onClick={handleViewDetails}
-                fullWidth
-                sx={{
-                  transition: 'all 0.2s ease',
-                  '&:active': {
-                    transform: 'scale(0.98)'
-                  }
-                }}
-              >
-                View Details
-              </Button>
+              <Box sx={{ display: 'flex', gap: 1 }}>
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  endIcon={<OpenInNewIcon />}
+                  onClick={handleViewDetails}
+                  fullWidth
+                  sx={{
+                    transition: 'all 0.2s ease',
+                    '&:active': { transform: 'scale(0.98)' }
+                  }}
+                >
+                  Live Demo
+                </Button>
+                {githubUrl && (
+                  <Button
+                    variant="outlined"
+                    color="secondary"
+                    startIcon={<GitHubIcon />}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      window.open(githubUrl, '_blank', 'noopener,noreferrer');
+                    }}
+                    fullWidth
+                    sx={{
+                      transition: 'all 0.2s ease',
+                      '&:active': { transform: 'scale(0.98)' }
+                    }}
+                  >
+                    View Code
+                  </Button>
+                )}
+              </Box>
             </CardItem>
           </CardContent>
         </Card>
