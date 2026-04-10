@@ -4,20 +4,14 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import { projects } from '../lib/projects-data';
 import ProjectCard from '../components/ui/ProjectCard';
+import FeaturedProjectCard from '../components/ui/FeaturedProjectCard';
 
-/**
- * ProjectsPage 컴포넌트
- * 포트폴리오 작품 목록 페이지 (정적 데이터 사용)
- */
 function ProjectsPage() {
+  const featured = projects.find((p) => p.is_featured);
+  const rest = projects.filter((p) => !p.is_featured);
+
   return (
-    <Box
-      sx={{
-        width: '100%',
-        minHeight: 'calc(100vh - 64px)',
-        py: { xs: 4, md: 8 }
-      }}
-    >
+    <Box sx={{ width: '100%', minHeight: 'calc(100vh - 64px)', py: { xs: 4, md: 8 } }}>
       <Container maxWidth="lg" sx={{ px: { xs: 2, md: 3 } }}>
         <Typography
           variant="h3"
@@ -49,38 +43,40 @@ function ProjectsPage() {
           각 프로젝트를 클릭하여 자세한 내용을 확인해보세요.
         </Typography>
 
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={{ xs: 2, md: 3 }} justifyContent="center">
-            {projects.map((project) => (
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 3, md: 4 } }}>
+          {featured && (
+            <FeaturedProjectCard
+              title={featured.title}
+              description={featured.description}
+              period={featured.period}
+              features={featured.features}
+              implementation_points={featured.implementation_points}
+              role={featured.role}
+              techStack={featured.tech_stack}
+              thumbnailUrl={featured.thumbnail_url}
+              detailUrl={featured.detail_url}
+              githubUrl={featured.github_url}
+            />
+          )}
+
+          <Grid container spacing={{ xs: 2, md: 3 }}>
+            {rest.map((project) => (
               <Grid key={project.id} size={{ xs: 12, sm: 6, md: 6 }}>
-                <Box>
-                  <ProjectCard
-                    title={project.title}
-                    description={project.description}
-                    period={project.period}
-                    features={project.features}
-                    role={project.role}
-                    techStack={project.tech_stack}
-                    thumbnailUrl={project.thumbnail_url}
-                    detailUrl={project.detail_url}
-                    githubUrl={project.github_url}
-                  />
-                </Box>
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  period={project.period}
+                  features={project.features}
+                  role={project.role}
+                  techStack={project.tech_stack}
+                  thumbnailUrl={project.thumbnail_url}
+                  detailUrl={project.detail_url}
+                  githubUrl={project.github_url}
+                />
               </Grid>
             ))}
           </Grid>
         </Box>
-
-        {projects.length === 0 && (
-          <Box sx={{ textAlign: 'center', py: 8 }}>
-            <Typography
-              variant="body1"
-              sx={{ color: 'text.secondary' }}
-            >
-              아직 등록된 프로젝트가 없습니다.
-            </Typography>
-          </Box>
-        )}
       </Container>
     </Box>
   );

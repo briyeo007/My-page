@@ -6,13 +6,12 @@ import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 import { projects } from '../../lib/projects-data';
 import ProjectCard from '../ui/ProjectCard';
+import FeaturedProjectCard from '../ui/FeaturedProjectCard';
 
-/**
- * ProjectsSection 컴포넌트
- * 홈페이지 내 대표 프로젝트 섹션 (정적 데이터 사용)
- */
 function ProjectsSection() {
   const displayProjects = projects.slice(0, 3);
+  const featured = displayProjects.find((p) => p.is_featured);
+  const rest = displayProjects.filter((p) => !p.is_featured);
 
   return (
     <Box
@@ -53,42 +52,45 @@ function ProjectsSection() {
           다양한 기술 스택을 활용하여 만든 프로젝트들입니다.
         </Typography>
 
-        <Box sx={{ flexGrow: 1 }}>
-          <Grid container spacing={{ xs: 2, md: 3 }} justifyContent="center">
-            {displayProjects.map((project) => (
-              <Grid key={project.id} size={{ xs: 12, sm: 6, md: 6 }}>
-                <Box>
-                  <ProjectCard
-                    title={project.title}
-                    description={project.description}
-                    period={project.period}
-                    features={project.features}
-                    role={project.role}
-                    techStack={project.tech_stack}
-                    thumbnailUrl={project.thumbnail_url}
-                    detailUrl={project.detail_url}
-                    githubUrl={project.github_url}
-                  />
-                </Box>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: { xs: 3, md: 4 } }}>
+          {/* 대표 프로젝트 */}
+          {featured && (
+            <FeaturedProjectCard
+              title={featured.title}
+              description={featured.description}
+              period={featured.period}
+              features={featured.features}
+              implementation_points={featured.implementation_points}
+              role={featured.role}
+              techStack={featured.tech_stack}
+              thumbnailUrl={featured.thumbnail_url}
+              detailUrl={featured.detail_url}
+              githubUrl={featured.github_url}
+            />
+          )}
+
+          {/* 나머지 프로젝트 */}
+          <Grid container spacing={{ xs: 2, md: 3 }}>
+            {rest.map((project) => (
+              <Grid key={project.id} size={{ xs: 12, sm: 6 }}>
+                <ProjectCard
+                  title={project.title}
+                  description={project.description}
+                  period={project.period}
+                  features={project.features}
+                  role={project.role}
+                  techStack={project.tech_stack}
+                  thumbnailUrl={project.thumbnail_url}
+                  detailUrl={project.detail_url}
+                  githubUrl={project.github_url}
+                />
               </Grid>
             ))}
           </Grid>
         </Box>
 
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            mt: { xs: 4, md: 6 }
-          }}
-        >
-          <Button
-            component={Link}
-            to="/projects"
-            variant="outlined"
-            color="secondary"
-            size="large"
-          >
+        <Box sx={{ display: 'flex', justifyContent: 'center', mt: { xs: 4, md: 6 } }}>
+          <Button component={Link} to="/projects" variant="outlined" color="secondary" size="large">
             View All Projects
           </Button>
         </Box>
