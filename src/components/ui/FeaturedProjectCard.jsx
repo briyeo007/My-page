@@ -120,12 +120,14 @@ function FeaturedProjectCard({ title, description, period, features = [], implem
                     <CheckCircleOutlineIcon
                       sx={{ fontSize: '1rem', color: 'secondary.main', mt: '1px', flexShrink: 0 }}
                     />
-                    <Typography variant="body2" sx={{ fontSize: '0.85rem', lineHeight: 1.65, color: 'text.secondary' }}>
-                      <Box component="span" sx={{ color: 'text.primary', fontWeight: 700 }}>
+                    <Typography variant="body2" sx={{ fontSize: '0.88rem', lineHeight: 1.7, color: 'text.primary' }}>
+                      <Box component="span" sx={{ color: 'secondary.main', fontWeight: 800, fontSize: '0.9rem' }}>
                         {point.label}
                       </Box>
-                      {' — '}
-                      {point.desc}
+                      <Box component="span" sx={{ color: 'text.disabled', mx: 0.5 }}>—</Box>
+                      <Box component="span" sx={{ color: 'text.primary', fontWeight: 500 }}>
+                        {point.desc}
+                      </Box>
                     </Typography>
                   </Box>
                 ))}
