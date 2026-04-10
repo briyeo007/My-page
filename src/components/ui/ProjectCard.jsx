@@ -187,7 +187,7 @@ function ProjectCard({ title, description, period, features = [], role, techStac
                     '&:active': { transform: 'scale(0.98)' }
                   }}
                 >
-                  Live Demo
+                  View Project
                 </Button>
                 {githubUrl && (
                   <Button
