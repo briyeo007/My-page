@@ -6,10 +6,10 @@ export const projects = [
     period: '2026.03 – 진행중',
     features: ['반응형 레이아웃', '슬라이드 배너', '크로스브라우저 대응'],
     implementation_points: [
-      '반응형 breakpoint — 모바일(360px) · 태블릿(768px) · 데스크탑(1280px) 3단계 대응',
-      '메뉴 애니메이션 — 햄버거 버튼 클릭 시 슬라이드 인/아웃 전환',
-      '배너 슬라이더 — 자동재생 + 터치 스와이프 커스터마이징',
-      '크로스브라우저 — Chrome · Safari · Edge 동일 렌더링 검수'
+      { label: '반응형 Breakpoint', desc: 'Mobile 360px / Tablet 768px / Desktop 1280px 3단계 분기 — 레이아웃 붕괴 없이 완성도 유지' },
+      { label: '햄버거 메뉴 애니메이션', desc: 'CSS transition으로 슬라이드 인/아웃 구현 — JS 라이브러리 없이 순수 CSS만 사용' },
+      { label: '배너 슬라이더', desc: '자동재생 + 터치 스와이프 직접 커스터마이징 — 기본 라이브러리 스타일 100% 오버라이드' },
+      { label: '크로스브라우저 대응', desc: 'Chrome · Safari · Edge 실기기 렌더링 검수 — vendor prefix 및 fallback 스타일 적용' }
     ],
     role: '100% 개인 작업 (기획 · 디자인 · 퍼블리싱)',
     tech_stack: ['HTML', 'CSS', 'JavaScript'],

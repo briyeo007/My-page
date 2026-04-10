@@ -91,21 +91,41 @@ function FeaturedProjectCard({ title, description, period, features = [], implem
 
           {/* 구현 포인트 */}
           {implementation_points.length > 0 && (
-            <Box>
+            <Box
+              sx={{
+                bgcolor: 'rgba(212, 165, 55, 0.06)',
+                border: '1px solid rgba(212, 165, 55, 0.2)',
+                borderLeft: '3px solid',
+                borderLeftColor: 'secondary.main',
+                borderRadius: '0 8px 8px 0',
+                p: 2
+              }}
+            >
               <Typography
                 variant="caption"
-                sx={{ color: 'secondary.main', fontWeight: 700, letterSpacing: 1, display: 'block', mb: 1 }}
+                sx={{
+                  color: 'secondary.main',
+                  fontWeight: 800,
+                  letterSpacing: 2,
+                  display: 'block',
+                  mb: 1.5,
+                  fontSize: '0.72rem'
+                }}
               >
-                구현 포인트
+                ✦ 구현 포인트
               </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 0.8 }}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.2 }}>
                 {implementation_points.map((point, i) => (
-                  <Box key={i} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1 }}>
+                  <Box key={i} sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.2 }}>
                     <CheckCircleOutlineIcon
-                      sx={{ fontSize: '0.95rem', color: 'secondary.main', mt: '2px', flexShrink: 0 }}
+                      sx={{ fontSize: '1rem', color: 'secondary.main', mt: '1px', flexShrink: 0 }}
                     />
-                    <Typography variant="body2" sx={{ color: 'text.secondary', fontSize: '0.85rem', lineHeight: 1.6 }}>
-                      {point}
+                    <Typography variant="body2" sx={{ fontSize: '0.85rem', lineHeight: 1.65, color: 'text.secondary' }}>
+                      <Box component="span" sx={{ color: 'text.primary', fontWeight: 700 }}>
+                        {point.label}
+                      </Box>
+                      {' — '}
+                      {point.desc}
                     </Typography>
                   </Box>
                 ))}
