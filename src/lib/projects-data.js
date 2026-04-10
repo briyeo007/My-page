@@ -46,8 +46,8 @@ export const projects = [
     features: ['CSS 애니메이션', '반응형 레이아웃', '다크 테마'],
     role: '100% 개인 작업 (기획 · 디자인 · 퍼블리싱)',
     tech_stack: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fbriyeo007.github.io%2FPortfolio-2%2F?w=800',
-    detail_url: 'https://briyeo007.github.io/Portfolio-2/',
+    thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.ungjunportfolio.com%2F?w=800',
+    detail_url: 'https://www.ungjunportfolio.com/',
     is_published: true,
     sort_order: 4
   }
