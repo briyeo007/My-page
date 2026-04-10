@@ -57,10 +57,13 @@ function ProjectsSection() {
           <Grid container spacing={{ xs: 2, md: 3 }} justifyContent="center">
             {displayProjects.map((project) => (
               <Grid key={project.id} size={{ xs: 12, sm: 6, md: 6 }}>
-                <Box sx={{ height: 420 }}>
+                <Box>
                   <ProjectCard
                     title={project.title}
                     description={project.description}
+                    period={project.period}
+                    features={project.features}
+                    role={project.role}
                     techStack={project.tech_stack}
                     thumbnailUrl={project.thumbnail_url}
                     detailUrl={project.detail_url}

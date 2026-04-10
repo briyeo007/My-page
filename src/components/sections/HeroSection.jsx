@@ -56,14 +56,15 @@ function HeroSection() {
           <Typography
             variant="overline"
             sx={{
-              color: 'text.secondary',
-              letterSpacing: 3,
+              color: 'secondary.main',
+              letterSpacing: 4,
               fontSize: { xs: '0.75rem', md: '0.875rem' },
               mb: 2,
-              display: 'block'
+              display: 'block',
+              fontWeight: 600
             }}
           >
-            Welcome to My Portfolio
+            Web Publisher Brian
           </Typography>
 
           {/* 이름 */}
@@ -88,11 +89,12 @@ function HeroSection() {
             sx={{
               color: 'secondary.main',
               fontWeight: 500,
-              mb: 4,
-              fontSize: { xs: '1.25rem', md: '1.75rem' }
+              mb: 3,
+              fontSize: { xs: '1.1rem', md: '1.5rem' },
+              letterSpacing: 1
             }}
           >
-            Web Publisher
+            Pixel-perfect &amp; Responsive Web Publishing
           </Typography>
 
           {/* 소개 */}
@@ -104,11 +106,25 @@ function HeroSection() {
               fontSize: { xs: '1rem', md: '1.1rem' },
               maxWidth: 600,
               mx: 'auto',
-              mb: 5
+              mb: 2
             }}
           >
-            사용자 친화적인 UI/UX 설계와 반응형 웹 개발에 열정을 가진 웹 개발자입니다.
-            새로운 기술을 배우고 성장하는 것을 즐기며, 협업을 통해 가치를 만들어갑니다.
+            모바일부터 데스크탑까지 완벽한 반응형 웹을 구현합니다.
+            크로스브라우저 호환성과 웹 접근성을 고려한 퍼블리싱으로
+            사용자 경험을 극대화합니다.
+          </Typography>
+
+          <Typography
+            variant="body2"
+            sx={{
+              color: 'secondary.main',
+              mb: 5,
+              fontSize: { xs: '0.8rem', md: '0.9rem' },
+              letterSpacing: 1,
+              opacity: 0.85
+            }}
+          >
+            Responsive Web &nbsp;/&nbsp; Cross-browser &nbsp;/&nbsp; Accessibility
           </Typography>
 
           {/* CTA 버튼들 */}
@@ -133,18 +149,17 @@ function HeroSection() {
               View Projects
             </Button>
             <Button
-              component={Link}
-              to="/about"
               variant="outlined"
               color="secondary"
               size="large"
+              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               sx={{
                 px: 4,
                 py: 1.5,
                 fontSize: '1rem'
               }}
             >
-              About Me
+              Contact
             </Button>
           </Stack>
         </Box>

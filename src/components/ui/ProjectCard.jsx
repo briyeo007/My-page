@@ -28,7 +28,7 @@ import { CardContainer, CardBody, CardItem } from './ThreeDCard';
  *   detailUrl="https://picstagram.netlify.app"
  * />
  */
-function ProjectCard({ title, description, techStack = [], thumbnailUrl, detailUrl }) {
+function ProjectCard({ title, description, period, features = [], role, techStack = [], thumbnailUrl, detailUrl }) {
   const handleViewDetails = () => {
     window.open(detailUrl, '_blank', 'noopener,noreferrer');
   };
@@ -77,17 +77,32 @@ function ProjectCard({ title, description, techStack = [], thumbnailUrl, detailU
             }}
           >
             <CardItem translateZ={50}>
-              <Typography
-                variant="h6"
-                component="h3"
-                sx={{
-                  color: 'secondary.main',
-                  fontWeight: 600,
-                  fontSize: { xs: '1rem', md: '1.25rem' }
-                }}
-              >
-                {title}
-              </Typography>
+              <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 1 }}>
+                <Typography
+                  variant="h6"
+                  component="h3"
+                  sx={{
+                    color: 'secondary.main',
+                    fontWeight: 600,
+                    fontSize: { xs: '1rem', md: '1.25rem' }
+                  }}
+                >
+                  {title}
+                </Typography>
+                {period && (
+                  <Typography
+                    variant="caption"
+                    sx={{
+                      color: 'text.disabled',
+                      fontSize: '0.7rem',
+                      whiteSpace: 'nowrap',
+                      mt: 0.5
+                    }}
+                  >
+                    {period}
+                  </Typography>
+                )}
+              </Box>
             </CardItem>
 
             <CardItem translateZ={40}>
@@ -96,21 +111,51 @@ function ProjectCard({ title, description, techStack = [], thumbnailUrl, detailU
                 sx={{
                   color: 'text.secondary',
                   lineHeight: 1.6,
-                  fontSize: { xs: '0.875rem', md: '1rem' }
+                  fontSize: { xs: '0.875rem', md: '0.95rem' }
                 }}
               >
                 {description}
               </Typography>
             </CardItem>
 
+            {features.length > 0 && (
+              <CardItem translateZ={35} sx={{ width: '100%' }}>
+                <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+                  {features.map((feature) => (
+                    <Chip
+                      key={feature}
+                      label={feature}
+                      size="small"
+                      sx={{
+                        bgcolor: 'rgba(212, 165, 55, 0.08)',
+                        color: 'secondary.main',
+                        border: '1px solid rgba(212, 165, 55, 0.3)',
+                        fontSize: '0.7rem',
+                        height: 22
+                      }}
+                    />
+                  ))}
+                </Box>
+              </CardItem>
+            )}
+
+            {role && (
+              <CardItem translateZ={32} sx={{ width: '100%' }}>
+                <Typography
+                  variant="caption"
+                  sx={{
+                    color: 'text.disabled',
+                    fontSize: '0.72rem',
+                    display: 'block'
+                  }}
+                >
+                  {role}
+                </Typography>
+              </CardItem>
+            )}
+
             <CardItem translateZ={30} sx={{ width: '100%' }}>
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  gap: 0.5
-                }}
-              >
+              <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
                 {techStack.map((tech) => (
                   <Chip
                     key={tech}

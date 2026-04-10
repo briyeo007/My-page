@@ -47,6 +47,7 @@ function ContactSection() {
 
   return (
     <Box
+      id="contact"
       component="section"
       sx={{
         py: { xs: 8, md: 12 },
