@@ -50,15 +50,20 @@ export const projects = [
   },
   {
     id: 4,
-    title: 'SkillBridge',
-    description: '두 번째 포트폴리오 사이트. 퍼블리셔 역량을 직접 보여주기 위해 다양한 인터랙션과 애니메이션 효과를 적용했습니다.',
-    period: '2024.09 – 2024.10',
-    features: ['CSS 애니메이션', '반응형 레이아웃', '다크 테마'],
+    title: '차타태권도',
+    description: '태권도장 공식 웹사이트 리뉴얼. 도장의 브랜드 아이덴티티를 새롭게 정립하고, 회원 모집과 정보 전달에 최적화된 UI/UX를 구현했습니다.',
+    period: '2026.04 – 2026.06',
+    features: ['브랜드 리뉴얼', '반응형 레이아웃', '스크롤 애니메이션'],
+    implementation_points: [
+      { label: '브랜드 아이덴티티 리디자인', desc: '기존 사이트 분석 후 컬러·타이포그래피 전면 개편 — 힘있고 신뢰감 있는 도장 이미지에 맞는 UI 구현' },
+      { label: '반응형 Breakpoint', desc: 'Mobile 360px / Tablet 768px / Desktop 1280px 3단계 분기 — 모든 디바이스에서 레이아웃 완성도 유지' },
+      { label: '스크롤 애니메이션', desc: 'Intersection Observer API 활용 — 콘텐츠가 뷰포트에 진입 시 자연스러운 페이드인 효과 적용' },
+      { label: '모바일 UX 최적화', desc: '터치 인터랙션 및 가독성 개선 — 모바일 사용자 대상 CTA 버튼 배치 및 메뉴 구조 최적화' }
+    ],
     role: '100% 개인 작업 (기획 · 디자인 · 퍼블리싱)',
     tech_stack: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.ungjunportfolio.com%2F?w=800',
-    detail_url: 'https://www.ungjunportfolio.com/',
-    github_url: 'https://github.com/briyeo007/Portfolio-2',
+    thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.chataekwondo.com%2F?w=800',
+    detail_url: 'https://www.chataekwondo.com/',
     is_published: true,
     sort_order: 4
   }
