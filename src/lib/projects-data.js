@@ -21,34 +21,6 @@ export const projects = [
     sort_order: 1
   },
   {
-    id: 2,
-    title: 'Furniture',
-    description: '가구 쇼핑몰 웹사이트. 모바일 퍼스트 기준으로 제작하여 다양한 디바이스에서 최적화된 쇼핑 경험을 제공합니다.',
-    period: '2025.11 – 2025.12',
-    features: ['모바일 퍼스트', '상품 필터 인터랙션', 'hover 애니메이션'],
-    role: '100% 개인 작업 (기획 · 디자인 · 퍼블리싱)',
-    tech_stack: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.ungjunliving.com%2F?w=800',
-    detail_url: 'https://www.ungjunliving.com/',
-    github_url: 'https://github.com/briyeo007/Furniture',
-    is_published: true,
-    sort_order: 2
-  },
-  {
-    id: 3,
-    title: 'Ungjun Ice Cream',
-    description: '아이스크림 브랜드 웹사이트. 브랜드 아이덴티티를 반영한 감각적인 UI와 부드러운 스크롤 애니메이션을 구현했습니다.',
-    period: '2025.08 – 2025.10',
-    features: ['스크롤 애니메이션', '반응형 그리드', '접근성(a11y) 고려'],
-    role: '100% 개인 작업 (기획 · 디자인 · 퍼블리싱)',
-    tech_stack: ['HTML', 'CSS', 'JavaScript'],
-    thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fungjunicecream.com%2F?w=800',
-    detail_url: 'https://ungjunicecream.com/',
-    github_url: 'https://github.com/briyeo007/icecream',
-    is_published: true,
-    sort_order: 3
-  },
-  {
     id: 4,
     title: '차태권도',
     description: '태권도장 공식 웹사이트 리뉴얼. 도장의 브랜드 아이덴티티를 새롭게 정립하고, 회원 모집과 정보 전달에 최적화된 UI/UX를 구현했습니다.',
@@ -64,6 +36,34 @@ export const projects = [
     tech_stack: ['HTML', 'CSS', 'JavaScript'],
     thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.chataekwondo.com%2F?w=800',
     detail_url: 'https://www.chataekwondo.com/',
+    is_published: true,
+    sort_order: 2
+  },
+  {
+    id: 2,
+    title: 'Furniture',
+    description: '가구 쇼핑몰 웹사이트. 모바일 퍼스트 기준으로 제작하여 다양한 디바이스에서 최적화된 쇼핑 경험을 제공합니다.',
+    period: '2025.11 – 2025.12',
+    features: ['모바일 퍼스트', '상품 필터 인터랙션', 'hover 애니메이션'],
+    role: '100% 개인 작업 (기획 · 디자인 · 퍼블리싱)',
+    tech_stack: ['HTML', 'CSS', 'JavaScript'],
+    thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.ungjunliving.com%2F?w=800',
+    detail_url: 'https://www.ungjunliving.com/',
+    github_url: 'https://github.com/briyeo007/Furniture',
+    is_published: true,
+    sort_order: 3
+  },
+  {
+    id: 3,
+    title: 'Ungjun Ice Cream',
+    description: '아이스크림 브랜드 웹사이트. 브랜드 아이덴티티를 반영한 감각적인 UI와 부드러운 스크롤 애니메이션을 구현했습니다.',
+    period: '2025.08 – 2025.10',
+    features: ['스크롤 애니메이션', '반응형 그리드', '접근성(a11y) 고려'],
+    role: '100% 개인 작업 (기획 · 디자인 · 퍼블리싱)',
+    tech_stack: ['HTML', 'CSS', 'JavaScript'],
+    thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fungjunicecream.com%2F?w=800',
+    detail_url: 'https://ungjunicecream.com/',
+    github_url: 'https://github.com/briyeo007/icecream',
     is_published: true,
     sort_order: 4
   }
