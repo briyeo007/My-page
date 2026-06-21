@@ -36,6 +36,7 @@ export const projects = [
     tech_stack: ['HTML', 'CSS', 'JavaScript'],
     thumbnail_url: 'https://s0.wordpress.com/mshots/v1/https%3A%2F%2Fwww.chataekwondo.com%2F?w=800',
     detail_url: 'https://www.chataekwondo.com/',
+    github_url: 'https://github.com/briyeo007/chataekwondo',
     is_published: true,
     sort_order: 2
   },
